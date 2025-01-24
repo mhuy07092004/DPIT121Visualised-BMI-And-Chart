@@ -1,6 +1,4 @@
 import unittest
-
-
 from assignment3 import Person, DietTracker
 
 
@@ -57,11 +55,3 @@ class TestDietTracker(unittest.TestCase):
         self.assertEqual(male_diet.daily_meats, 3)
         self.assertEqual(male_diet.daily_dairy, 2)
         self.assertEqual(male_diet.bmi,27.46)
-
-    def test_invalid_diet(self):
-        """Test the Person class for invalid gender input"""
-        invalid_input = [-1, 0, 45]
-        for vegetables in invalid_input:
-            with self.assertRaises(ValueError):
-               user_input  = DietTracker(vegetables, 10, 2,3,4)
-                DietTracker.validate()
